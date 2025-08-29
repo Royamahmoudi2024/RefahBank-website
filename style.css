@@ -1,0 +1,266 @@
+/* Reset اولیه*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'vazirmatn' , sans-serif;
+    background: #fff;
+    direction: rtl;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header styles */
+.header {
+    background: linear-gradient(to left , #2b2fda, #7c1f93);
+    padding: 15px 0;
+    color: #fff;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo img {
+    height: 50px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+.nav-list li a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.nav-list li a:hover {
+    color: #ffda44;
+}
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+.lang-switch,
+.login-btn {
+    background-color: white;
+    color: #2b2fda;
+    border: none;
+    padding: 8px  12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.login-btn:hover {
+    background-color: #ffda44;
+    color: #000;
+}
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responaive styles */
+@media (max-width: 768px ) {
+    .nav {
+        display: none;
+        width: 100%;
+    }
+    .nav.active {
+        display: block;
+    }
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+        background: #4322a8;
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .header-actions {
+        margin-top: 10px;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to left, #2b2fda, #7c1f93);
+  color: white;
+  padding: 60px 0;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.hero-btn {
+  background-color: white;
+  color: #2b2fda;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero-graphics {
+  position: relative;
+  width: 500px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+/* انیمیشن‌ها */
+
+/* سکه چپ */
+.coin-left {
+  position: absolute;
+  left: 35%;
+  bottom: 100px;
+  width: 70px;
+  animation: coinBlink 2s ease-in-out infinite;
+}
+
+/* لپ‌تاپ */
+.laptop {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  transform: translateX(-50%);
+  width: 300px;
+  animation: none;
+}
+
+/* دانلود جلو و عقب */
+.download {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  z-index: 2;
+  animation: floatDownload 4s ease-in-out infinite;
+  animation-delay: 0s; /* شروع همزمان */
+}
+
+/* موبایل */
+.mobile {
+  position: absolute;
+  bottom: 0;
+  right: 65%;
+  transform: translateX(-50%);
+  width: 150px;
+  animation: floatMobile 4s ease-in-out infinite;
+  animation-delay: 0s; /* شروع همزمان */
+}
+
+/* انیمیشن شناور بالا و پایین */
+@keyframes floatVertical {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); } /* حرکت 20px به بالا */
+  100% { transform: translateY(0); }
+}
+
+/* سکه سمت راست */
+.coin-right {
+  position: absolute;
+  left: 75%;           /* موقعیت X */
+  bottom: 120px;       /* موقعیت Y */
+  width: 70px;
+  animation: floatVertical 2s ease-in-out infinite; /* حرکت بالا و پایین */
+}
+/* Keyframes */
+@keyframes floatLaptop {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes floatMobile {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* انیمیشن حرکت طولانی‌تر دکمه دانلود */
+@keyframes downloadAnimation {
+  0% {
+    transform: translateX(-60%) translateY(0);  /* عقب‌تر */
+  }
+  50% {
+    transform: translateX(-40%) translateY(-10px); /* جلوتر */
+  }
+  75% {
+    transform: translateX(-35%) translateY(-10px); /* کمی جلوتر */
+  }
+  100% {
+    transform: translateX(-60%) translateY(0);  /* بازگشت عقب */
+  }
+}
+
+.download {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  z-index: 2;
+  animation: downloadAnimation 5s ease-in-out infinite; /* مدت زمان کمی طولانی‌تر */
+}
+
+@keyframes coinBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-graphics {
+    width: 260px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  .laptop { width: 120px; left: 20px; }
+  .mobile { width: 90px; right: 20px; }
+  .download { width: 50px; }
+  .coin-left, .coin-right { width: 40px; }
+}

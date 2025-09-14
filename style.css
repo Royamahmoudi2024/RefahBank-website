@@ -141,8 +141,8 @@ body {
 
 .hero-graphics {
   position: relative;
-  width: 500px;
-  height: 350px;
+  width: 60vw;
+  height: 45vh;
   margin: 0 auto;
 }
 
@@ -151,9 +151,9 @@ body {
 /* سکه چپ */
 .coin-left {
   position: absolute;
-  left: 35%;
-  bottom: 100px;
-  width: 70px;
+  left: -6vw;
+  bottom: 8vh;
+  width: 6vw;
   animation: coinBlink 2s ease-in-out infinite;
 }
 
@@ -161,33 +161,38 @@ body {
 .laptop {
   position: absolute;
   bottom: 0;
-  left: 50px;
-  transform: translateX(-50%);
-  width: 300px;
+  left: 0;
+  width: 25vw;
+  z-index: 1;
   animation: none;
 }
 
 /* دانلود جلو و عقب */
 .download {
   position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  z-index: 2;
-  animation: floatDownload 4s ease-in-out infinite;
+  bottom: 12vh;
+  left: 12vw;
+  width: 14vw;
+  z-index: 3;
+ 
   animation-delay: 0s; /* شروع همزمان */
 }
 
 /* موبایل */
 .mobile {
   position: absolute;
-  bottom: 0;
-  right: 65%;
+  bottom: 20;
+  right: 0;
   transform: translateX(-50%);
   width: 150px;
-  animation: floatMobile 4s ease-in-out infinite;
+  animation: floatMobile 3s ease-in-out infinite;
+  z-index: 2;
   animation-delay: 0s; /* شروع همزمان */
+}
+@keyframes floatDownload {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
 }
 
 /* انیمیشن شناور بالا و پایین */
@@ -216,32 +221,6 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-/* انیمیشن حرکت طولانی‌تر دکمه دانلود */
-@keyframes downloadAnimation {
-  0% {
-    transform: translateX(-60%) translateY(0);  /* عقب‌تر */
-  }
-  50% {
-    transform: translateX(-40%) translateY(-10px); /* جلوتر */
-  }
-  75% {
-    transform: translateX(-35%) translateY(-10px); /* کمی جلوتر */
-  }
-  100% {
-    transform: translateX(-60%) translateY(0);  /* بازگشت عقب */
-  }
-}
-
-.download {
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  z-index: 2;
-  animation: downloadAnimation 5s ease-in-out infinite; /* مدت زمان کمی طولانی‌تر */
-}
-
 @keyframes coinBlink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
@@ -255,12 +234,12 @@ body {
   }
 
   .hero-graphics {
-    width: 260px;
-    height: 200px;
+    width: 80vw;
+    height: 40vh;
     margin-bottom: 20px;
   }
-  .laptop { width: 120px; left: 20px; }
-  .mobile { width: 90px; right: 20px; }
-  .download { width: 50px; }
-  .coin-left, .coin-right { width: 40px; }
+  .laptop { width: 45vw; left: 5vw; }
+  .mobile { width: 25vw; right: 5vw; }
+  .download { width: 20vw; }
+  .coin-left, .coin-right { width: 12vw; }
 }

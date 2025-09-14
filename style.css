@@ -66,6 +66,10 @@ body {
     background-color: #ffda44;
     color: #000;
 }
+.lang-switch:hover {
+   background-color: #ffda44;
+    color: #000;
+}
 /* Mobile Menu */
 .menu-toggle {
     display: none;
@@ -108,6 +112,10 @@ body {
   padding: 60px 0;
 }
 
+.hero-btn:hover {
+  background-color: #ffda44;
+    color: #000;
+}
 .hero-container {
   display: flex;
   align-items: center;

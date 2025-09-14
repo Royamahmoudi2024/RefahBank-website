@@ -151,8 +151,8 @@ body {
 /* سکه چپ */
 .coin-left {
   position: absolute;
-  left: -6vw;
-  bottom: 8vh;
+  left: -5vw;
+  bottom: 2vh;
   width: 6vw;
   animation: coinBlink 2s ease-in-out infinite;
 }
@@ -167,32 +167,34 @@ body {
   animation: none;
 }
 
-/* دانلود جلو و عقب */
-.download {
-  position: absolute;
-  bottom: 12vh;
-  left: 12vw;
-  width: 14vw;
-  z-index: 3;
- 
-  animation-delay: 0s; /* شروع همزمان */
-}
 
 /* موبایل */
 .mobile {
   position: absolute;
-  bottom: 20;
-  right: 0;
+  bottom: 5vh;
+  right: 28vw;
   transform: translateX(-50%);
-  width: 150px;
+  width: 10vw;
   animation: floatMobile 3s ease-in-out infinite;
   z-index: 2;
   animation-delay: 0s; /* شروع همزمان */
 }
+
+/* دانلود جلو و عقب */
+.download {
+  position: absolute;
+  bottom: 12vh;
+  left: 16vw;
+  width: 7vw;
+  z-index: 3;
+ transform: translateX(-50%);
+ animation: floatDownload 2s ease-in-out infinite;
+  animation-delay: 0s; /* شروع همزمان */
+}
+
 @keyframes floatDownload {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(0); }
+  0%  { transform: translateX(-50%) translateY(-10px); }
+  100% { transform:  translateX(-50%) translateY(10px); }
 }
 
 /* انیمیشن شناور بالا و پایین */
@@ -205,9 +207,9 @@ body {
 /* سکه سمت راست */
 .coin-right {
   position: absolute;
-  left: 75%;           /* موقعیت X */
-  bottom: 120px;       /* موقعیت Y */
-  width: 70px;
+  left: 50%;           /* موقعیت X */
+  bottom: 3vh;       /* موقعیت Y */
+  width: 60px;
   animation: floatVertical 2s ease-in-out infinite; /* حرکت بالا و پایین */
 }
 /* Keyframes */
@@ -234,12 +236,12 @@ body {
   }
 
   .hero-graphics {
-    width: 80vw;
-    height: 40vh;
+    width: 260px;
+    height: 200px;
     margin-bottom: 20px;
   }
-  .laptop { width: 45vw; left: 5vw; }
-  .mobile { width: 25vw; right: 5vw; }
+  .laptop { width: 45vw; left: 20px; }
+  .mobile { width: 25vw; right: 20px; }
   .download { width: 20vw; }
   .coin-left, .coin-right { width: 12vw; }
 }

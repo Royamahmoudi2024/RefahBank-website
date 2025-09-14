@@ -70,6 +70,15 @@ body {
    background-color: #ffda44;
     color: #000;
 }
+
+.header-wave {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-bottom: -5px; /* برای چسبیدن به بخش بعدی */
+}
+
 /* Mobile Menu */
 .menu-toggle {
     display: none;
@@ -254,4 +263,9 @@ body {
   .mobile { width: 25vw; right: 20px; }
   .download { width: 20vw; }
   .coin-left, .coin-right { width: 12vw; }
+}
+
+
+body.lang-en {
+  font-family: Arial, sans-serif; 
 }

@@ -18,7 +18,7 @@ body {
 
 /* Header styles */
 .header {
-    background: linear-gradient(to left , #42a38e, #7c1f93);
+    background: linear-gradient(to left ,#d383e7, #1E2A78);
     padding: 15px 0;
     color: #fff;
 }
@@ -39,7 +39,7 @@ body {
     gap: 25px;
 }
 .nav-list li a{
-    color: white;
+    color:black;
     text-decoration: none;
     font-size: 16px;
     transition: 0.3s;
@@ -107,7 +107,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to left, #42a38e, #7c1f93);
+  background: linear-gradient(to left, #d383e7, #1E2A78);
   color: white;
   padding: 60px 0;
 }
@@ -130,12 +130,14 @@ body {
 .hero-text h1 {
   font-size: 32px;
   margin-bottom: 15px;
+  color: #000;
 }
 
 .hero-text p {
   font-size: 18px;
   line-height: 1.8;
   margin-bottom: 20px;
+  color: #000;
 }
 
 .hero-btn {

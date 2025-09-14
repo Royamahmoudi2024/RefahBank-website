@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ورود به بانکداری رفاه</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="login-page">
+
+    <!-- پس‌زمینه انیمیشنی -->
+    <div class="background">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- فرم ورود -->
+    <div class="login-container">
+      <div class="login-header">
+        <img src="images/logo.svg" alt="لوگو بانک رفاه" class="logo">
+        <h1>ورود به بانکداری آنلاین</h1>
+      </div>
+
+      <form class="login-form" id="loginForm">
+        <div class="input-group">
+          <input type="text" id="username" required>
+          <label for="username">نام کاربری</label>
+        </div>
+        <div class="input-group">
+          <input type="password" id="password" required>
+          <label for="password">رمز عبور</label>
+        </div>
+        <button type="submit" class="login-btn">ورود</button>
+      </form>
+
+      <div class="login-footer">
+        <a href="#">فراموشی رمز عبور؟</a>
+        <a href="#">ثبت نام</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

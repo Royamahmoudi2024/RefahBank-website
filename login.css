@@ -1,0 +1,153 @@
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family:'Vazirmatn', sans-serif;
+  background: #121212;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* پس‌زمینه شناور */
+.background {
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0; left:0;
+  z-index:-1;
+  overflow:hidden;
+}
+
+.background span {
+  position:absolute;
+  display:block;
+  width:200px;
+  height:200px;
+  background: linear-gradient(45deg,#2b2fda,#7c1f93);
+  border-radius:50%;
+  opacity:0.5;
+  animation: float 10s linear infinite;
+}
+
+.background span:nth-child(1){top:10%;left:5%;animation-duration:12s;}
+.background span:nth-child(2){top:50%;left:15%;animation-duration:8s;}
+.background span:nth-child(3){top:20%;left:70%;animation-duration:15s;}
+.background span:nth-child(4){top:70%;left:40%;animation-duration:10s;}
+.background span:nth-child(5){top:60%;left:80%;animation-duration:12s;}
+
+@keyframes float{
+  0%{transform:translateY(0) translateX(0);}
+  50%{transform:translateY(-50px) translateX(50px);}
+  100%{transform:translateY(0) translateX(0);}
+}
+
+/* کانتینر فرم */
+.login-page{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.login-container{
+  background: rgba(0,0,0,0.7);
+  padding:40px 50px;
+  border-radius:15px;
+  width:360px;
+  text-align:center;
+  backdrop-filter: blur(10px);
+  box-shadow:0 0 50px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.login-container:hover {
+  transform: scale(1.02);
+}
+
+/* هدر فرم */
+.login-header .logo {
+  width:70px;
+  margin-bottom: 15px;
+}
+
+.login-header h1 {
+  font-size:24px;
+  margin-bottom:30px;
+  color:#fff;
+}
+
+/* فرم ورودی */
+.input-group{
+  position:relative;
+  margin-bottom:25px;
+}
+
+.input-group input{
+  width:100%;
+  padding:12px 15px;
+  background: rgba(255,255,255,0.1);
+  border:2px solid #fff;
+  border-radius:8px;
+  color:#fff;
+  outline:none;
+  transition:0.3s;
+}
+
+.input-group input:focus{
+  border-color:#ffda44;
+  background: rgba(255,255,255,0.2);
+}
+
+.input-group label{
+  position:absolute;
+  top:50%;
+  right:15px;
+  transform:translateY(-50%);
+  color:#aaa;
+  pointer-events:none;
+  transition:0.3s;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label{
+  top:-10px;
+  font-size:12px;
+  color:#ffda44;
+}
+
+/* دکمه ورود */
+.login-btn{
+  width:100%;
+  padding:12px;
+  background: linear-gradient(45deg,#2b2fda,#7c1f93);
+  border:none;
+  border-radius:8px;
+  color:#fff;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.login-btn:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #7c1f93;
+}
+
+/* لینک ها */
+.login-footer{
+  margin-top:20px;
+  display:flex;
+  justify-content:space-between;
+}
+
+.login-footer a{
+  color:#ffda44;
+  font-size:13px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.login-footer a:hover{
+  color:#fff;
+}

@@ -18,7 +18,7 @@ body {
 
 /* Header styles */
 .header {
-    background: linear-gradient(to left , #2b2fda, #7c1f93);
+    background: linear-gradient(to left , #42a38e, #7c1f93);
     padding: 15px 0;
     color: #fff;
 }
@@ -103,7 +103,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to left, #2b2fda, #7c1f93);
+  background: linear-gradient(to left, #42a38e, #7c1f93);
   color: white;
   padding: 60px 0;
 }

@@ -271,20 +271,20 @@ body {
   }
 
   .laptop { 
-    width: 45vw; 
+    width: 50vw; 
     left: 0; 
     bottom: 0; 
   }
 
   .mobile { 
-    width: 25vw; 
+    width: 18vw; 
     right: 5vw; 
     bottom: 5vh; 
   }
 
   .download { 
-    width: 18vw; 
-    bottom: 10vh; 
+    width: 15vw; 
+    bottom: 5vh; 
     left: 50%; 
     transform: translateX(-50%); 
     animation: floatDownload 3s ease-in-out infinite alternate;

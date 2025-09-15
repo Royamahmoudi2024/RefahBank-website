@@ -206,14 +206,15 @@ body {
   left: 16vw;
   width: 7vw;
   z-index: 3;
- transform: translateX(-50%);
- animation: floatDownload 2s ease-in-out infinite;
-  animation-delay: 0s; /* شروع همزمان */
+  transform: translateX(-50%);
+  animation: floatDownload 3s ease-in-out infinite alternate;
 }
 
+/* انیمیشن عقب-جلو (X) + کمی بالا پایین (Y) */
 @keyframes floatDownload {
-  0%  { transform: translateX(-50%) translateY(-10px); }
-  100% { transform:  translateX(-50%) translateY(10px); }
+  0%   { transform: translateX(-50%) translateY(0) scale(1); }
+  50%  { transform: translateX(-60%) translateY(-10px) scale(1.05); }
+  100% { transform: translateX(-40%) translateY(5px) scale(1); }
 }
 
 /* انیمیشن شناور بالا و پایین */
@@ -258,13 +259,31 @@ body {
     width: 260px;
     height: 200px;
     margin-bottom: 20px;
+    position: relative;
   }
-  .laptop { width: 45vw; left: 20px; }
-  .mobile { width: 25vw; right: 20px; }
-  .download { width: 20vw; }
+
+  .laptop { 
+    width: 45vw; 
+    left: 0; 
+    bottom: 0; 
+  }
+
+  .mobile { 
+    width: 25vw; 
+    right: 5vw; 
+    bottom: 5vh; 
+  }
+
+  .download { 
+    width: 18vw; 
+    bottom: 10vh; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    animation: floatDownload 3s ease-in-out infinite alternate;
+  }
+
   .coin-left, .coin-right { width: 12vw; }
 }
-
 
 body.lang-en {
   font-family: Arial, sans-serif; 

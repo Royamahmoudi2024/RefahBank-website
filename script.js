@@ -1,16 +1,9 @@
-const menuToggle = document.getElementById('mobile-menu');
-const nav = document.querySelector(".nav");
-
-menuToggle.addEventListener('click' , () => {
-    nav.classList.toggle(active);
-});
-
 // گرفتن دکمه تغییر زبان
 const langBtn = document.getElementById("langSwitch");
 
 langBtn.addEventListener("click", function() {
     document.body.classList.toggle("lang-en"); // تغییر فونت
-    if(langBtn.textContent === "EN") {
+    if (langBtn.textContent === "EN") {
         langBtn.textContent = "FA"; // تغییر متن دکمه
         // تغییر متن Hero
         document.querySelector("h1").textContent = "Social Security Premium";
@@ -37,6 +30,10 @@ langBtn.addEventListener("click", function() {
     }
 });
 
-document.getElementById("openLogin").addEventListener("click", function(){
-    window.location.href = "login.html";
+// اسکریپت منوی همبرگری
+const menuToggle = document.getElementById("mobile-menu");
+const nav = document.querySelector(".nav");
+
+menuToggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
 });

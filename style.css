@@ -260,7 +260,7 @@ body {
 @media (max-width: 768px) {
   .hero-container {
     flex-direction: column-reverse;
-    text-align: center;
+    text-align: center; 
   }
 
   .hero-graphics {
@@ -290,7 +290,18 @@ body {
     animation: floatDownload 3s ease-in-out infinite alternate;
   }
 
-  .coin-left, .coin-right { width: 12vw; }
+  .coin-left {
+    width: 12vw;
+    left: 2vw;
+    bottom: 5vh;
+  }
+  
+  .coin-right {
+    width: 8vw;
+    left: auto;
+    right: 5vw;
+    bottom: 5vh;
+  }
 }
 
 body.lang-en {

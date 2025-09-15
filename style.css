@@ -271,7 +271,7 @@ body {
   }
 
   .laptop { 
-    width: 50vw; 
+    width: 55vw; 
     left: 0; 
     bottom: 0; 
   }
@@ -299,7 +299,7 @@ body {
   .coin-right {
     width: 8vw;
     left: auto;
-    right: 5vw;
+    right: 2vw;
     bottom: 5vh;
   }
 }

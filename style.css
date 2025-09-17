@@ -215,14 +215,14 @@ body {
   width: 7vw;
   z-index: 3;
   transform: translateX(-50%);
-  animation: floatDownload 3s ease-in-out infinite alternate;
+  animation: floatDownload 4s ease-in-out infinite alternate;
 }
 
 /* انیمیشن عقب-جلو (X) + کمی بالا پایین (Y) */
 @keyframes floatDownload {
-  0%   { transform: translateX(-50%) translateY(0) scale(1); }
-  50%  { transform: translateX(-60%) translateY(-10px) scale(1.05); }
-  100% { transform: translateX(-40%) translateY(5px) scale(1); }
+  0%   { transform: translate3d(-50%, 0, 0) scale(1); }
+  50%  { transform: translate3d(-60%, -10px, 0) scale(1.05); }
+  100% { transform: translate3d(-40%, 5px, 0) scale(1); }
 }
 
 /* انیمیشن شناور بالا و پایین */
@@ -238,7 +238,7 @@ body {
   left: 50%;           /* موقعیت X */
   bottom: 3vh;       /* موقعیت Y */
   width: 60px;
-  animation: floatVertical 2s ease-in-out infinite; /* حرکت بالا و پایین */
+  animation: floatVertical 3s ease-in-out infinite; /* حرکت بالا و پایین */
 }
 /* Keyframes */
 @keyframes floatLaptop {
@@ -247,8 +247,9 @@ body {
 }
 
 @keyframes floatMobile {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
+  0%   { transform: translate3d(0,0,0); }
+  50%  { transform: translate3d(0,-8px,0); }
+  100% { transform: translate3d(0,0,0); }
 }
 
 @keyframes coinBlink {
@@ -274,6 +275,7 @@ body {
     width: 55vw; 
     left: 0; 
     bottom: 0; 
+    z-index: 1;
   }
 
   .mobile { 
@@ -294,8 +296,9 @@ body {
     width: 12vw;
     left: 2vw;
     bottom: 5vh;
+    z-index: 3;
   }
-  
+ 
   .coin-right {
     width: 8vw;
     left: auto;

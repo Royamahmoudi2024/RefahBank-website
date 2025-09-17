@@ -1,11 +1,12 @@
-/* Reset اولیه*/
+/* Reset اولیه */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    font-family: 'vazirmatn' , sans-serif;
+    font-family: 'vazirmatn', sans-serif;
     background: #fff;
     direction: rtl;
 }
@@ -18,7 +19,7 @@ body {
 
 /* Header styles */
 .header {
-    background: linear-gradient(to left ,#d383e7, #1E2A78);
+    background: linear-gradient(to left, #d383e7, #1E2A78);
     padding: 15px 0;
     color: #fff;
 }
@@ -35,127 +36,123 @@ body {
 
 /* دکمه دسترسی سریع */
 .quick-menu {
-  position: relative; /* برای dropdown */
-  display: inline-block;
-  margin-left: 10px; /* فاصله از لوگو */
+    position: relative; /* برای dropdown */
+    display: inline-block;
+    margin-left: 10px; /* فاصله از لوگو */
 }
 
 .quick-btn {
-  background: rgba(255, 255, 255, 0.2); /* شیشه‌ای */
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 8px;
-  color: #fff;
-  padding: 8px 12px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
+    background: rgba(255, 255, 255, 0.2); /* شیشه‌ای */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 8px;
+    color: #fff;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .quick-btn:hover {
-  background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.35);
 }
 
 /* منوی کشویی */
 .quick-dropdown {
-  display: none; /* اول مخفی */
-  position: absolute;
-  top: 100%; /* زیر دکمه */
-  left: 0;
-  background: rgba(0,0,0,0.8);
-  backdrop-filter: blur(10px);
-  border-radius: 8px;
-  padding: 10px 0;
-  min-width: 220px;
-  z-index: 999;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: none; /* اول مخفی */
+    position: absolute;
+    top: 100%; /* زیر دکمه */
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 10px 0;
+    min-width: 220px;
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
+
 .quick-menu:hover .quick-dropdown {
-  display: block;
+    display: block;
 }
 
 .quick-dropdown li {
-  list-style: none;
+    list-style: none;
 }
 
 .quick-dropdown li a {
-  display: block;
-  padding: 8px 15px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-  transition: 0.3s;
+    display: block;
+    padding: 8px 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
 }
 
 .quick-dropdown li a:hover {
-  background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.1);
 }
 
-/* وقتی کلاس active اضافه شد نمایش داده شود */
 .quick-menu.active .quick-dropdown {
-  display: block;
+    display: block;
 }
 
-/* موبایل */
-@media (max-width: 768px) {
-  .quick-menu {
-    margin-left: 0;
-    margin-bottom: 10px;
-  }
-  .quick-dropdown {
-    left: 0;
-    top: 100%;
-    min-width: 180px;
-  }
-}
-
+/* Nav */
 .nav-list {
     list-style: none;
     display: flex;
     gap: 25px;
 }
-.nav-list li a{
-    color:black;
+
+.nav-list li a {
+    color: black;
     text-decoration: none;
     font-size: 16px;
     transition: 0.3s;
 }
+
 .nav-list li a:hover {
     color: #ffda44;
 }
+
+/* Header actions */
 .header-actions {
     display: flex;
     gap: 10px;
 }
+
 .lang-switch,
 .login-btn {
     background-color: white;
     color: #2b2fda;
     border: none;
-    padding: 8px  12px;
+    padding: 8px 12px;
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
 }
+
 .login-btn:hover {
     background-color: #ffda44;
     color: #000;
 }
+
 .lang-switch:hover {
-   background-color: #ffda44;
+    background-color: #ffda44;
     color: #000;
 }
 
+/* Header wave */
 .header-wave {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  margin-bottom: -5px; /* برای چسبیدن به بخش بعدی */
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    margin-bottom: -5px;
 }
 
-/* Mobile Menu */
+/* Mobile Menu toggle */
 .menu-toggle {
     display: none;
     font-size: 28px;
@@ -163,227 +160,179 @@ body {
     color: white;
 }
 
-/* Responaive styles */
-@media (max-width: 768px ) {
-    .nav {
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        background: #f2f2f2;
-        padding: 15px 0;
-        box-shadow: 0 4px 10px rgba(0,0,0,0,1);
-        z-index: 999;
-    }
-    .nav.active {
-        display: block;
-    }
-    .nav-list {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-    }
-    .nav-list li a {
-      color: #333;
-      font-size: 16px;
-    }
-    .menu-toggle {
-        display: block;
-    }
-    .header-actions {
-        margin-top: 10px;
-        flex-direction: column;
-        width: 100%;
-    }
-}
-
 /* Hero Section */
 .hero {
-  background: linear-gradient(to left, #d383e7, #1E2A78);
-  color: white;
-  padding: 60px 0;
+    background: linear-gradient(to left, #d383e7, #1E2A78);
+    color: white;
+    padding: 60px 0;
 }
 
 .hero-btn:hover {
-  background-color: #ffda44;
+    background-color: #ffda44;
     color: #000;
 }
+
 .hero-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .hero-text {
-  max-width: 500px;
+    max-width: 500px;
 }
 
 .hero-text h1 {
-  font-size: 32px;
-  margin-bottom: 15px;
-  color: #000;
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #000;
 }
 
 .hero-text p {
-  font-size: 18px;
-  line-height: 1.8;
-  margin-bottom: 20px;
-  color: #000;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #000;
 }
 
 .hero-btn {
-  background-color: white;
-  color: #2b2fda;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
+    background-color: white;
+    color: #2b2fda;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .hero-graphics {
-  position: relative;
-  width: 60vw;
-  height: 45vh;
-  margin: 0 auto;
+    position: relative;
+    width: 60vw;
+    height: 45vh;
+    margin: 0 auto;
 }
 
 /* انیمیشن‌ها */
-
-/* سکه چپ */
 .coin-left {
-  position: absolute;
-  left: -5vw;
-  bottom: 2vh;
-  width: 6vw;
-  animation: coinBlink 2s ease-in-out infinite;
+    position: absolute;
+    left: -5vw;
+    bottom: 2vh;
+    width: 6vw;
+    animation: coinBlink 2s ease-in-out infinite;
 }
 
-/* لپ‌تاپ */
 .laptop {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 25vw;
-  z-index: 1;
-  animation: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 25vw;
+    z-index: 1;
+    animation: none;
 }
 
-
-/* موبایل */
 .mobile {
-  position: absolute;
-  bottom: 5vh;
-  right: 28vw;
-  transform: translateX(-50%);
-  width: 10vw;
-  animation: floatMobile 3s ease-in-out infinite;
-  z-index: 2;
-  animation-delay: 0s; /* شروع همزمان */
+    position: absolute;
+    bottom: 5vh;
+    right: 28vw;
+    transform: translateX(-50%);
+    width: 10vw;
+    animation: floatMobile 3s ease-in-out infinite;
+    z-index: 2;
 }
 
-/* دانلود جلو و عقب */
 .download {
-  position: absolute;
-  bottom: 12vh;
-  left: 16vw;
-  width: 7vw;
-  z-index: 3;
-  transform: translateX(-50%);
-  animation: floatDownload 4s ease-in-out infinite alternate;
+    position: absolute;
+    bottom: 12vh;
+    left: 16vw;
+    width: 7vw;
+    z-index: 3;
+    transform: translateX(-50%);
+
+    animation: floatDownload 4s ease-in-out infinite alternate;
 }
 
-/* انیمیشن عقب-جلو (X) + کمی بالا پایین (Y) */
-@keyframes floatDownload {
-  0%   { transform: translate3d(-50%, 0, 0) scale(1); }
-  50%  { transform: translate3d(-60%, -10px, 0) scale(1.05); }
-  100% { transform: translate3d(-40%, 5px, 0) scale(1); }
-}
-
-/* انیمیشن شناور بالا و پایین */
-@keyframes floatVertical {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-20px); } /* حرکت 20px به بالا */
-  100% { transform: translateY(0); }
-}
-
-/* سکه سمت راست */
 .coin-right {
-  position: absolute;
-  left: 50%;           /* موقعیت X */
-  bottom: 3vh;       /* موقعیت Y */
-  width: 60px;
-  animation: floatVertical 3s ease-in-out infinite; /* حرکت بالا و پایین */
+    position: absolute;
+    left: 50%;
+    bottom: 3vh;
+    width: 60px;
+    animation: floatVertical 3s ease-in-out infinite;
 }
+
 /* Keyframes */
-@keyframes floatLaptop {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+@keyframes floatDownload {
+    0%   { transform: translate3d(-50%, 0, 0) scale(1); }
+    50%  { transform: translate3d(-60%, -10px, 0) scale(1.05); }
+    100% { transform: translate3d(-40%, 5px, 0) scale(1); }
+}
+
+@keyframes floatVertical {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
 }
 
 @keyframes floatMobile {
-  0%   { transform: translate3d(0,0,0); }
-  50%  { transform: translate3d(0,-8px,0); }
-  100% { transform: translate3d(0,0,0); }
+    0%   { transform: translate3d(0,0,0); }
+    50%  { transform: translate3d(0,-8px,0); }
+    100% { transform: translate3d(0,0,0); }
 }
 
 @keyframes coinBlink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 /* ریسپانسیو */
 @media (max-width: 768px) {
-  .hero-container {
-    flex-direction: column-reverse;
-    text-align: center; 
-  }
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center; 
+    }
 
-  .hero-graphics {
-    width: 260px;
-    height: 200px;
-    margin-bottom: 20px;
-    position: relative;
-  }
+    .hero-graphics {
+        width: 260px;
+        height: 200px;
+        margin-bottom: 20px;
+        position: relative;
+    }
 
-  .laptop { 
-    width: 55vw; 
-    left: 0; 
-    bottom: 0; 
-    z-index: 1;
-  }
+    .laptop { 
+        width: 55vw; 
+        left: 0; 
+        bottom: 0; 
+        z-index: 1;
+    }
 
-  .mobile { 
-    width: 18vw; 
-    right: 5vw; 
-    bottom: 5vh; 
-  }
+    .mobile { 
+        width: 18vw; 
+        right: 5vw; 
+        bottom: 5vh; 
+    }
 
-  .download { 
-    width: 15vw; 
-    bottom: 5vh; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    animation: floatDownload 3s ease-in-out infinite alternate;
-  }
+    .download { 
+        width: 15vw; 
+        bottom: 5vh; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        animation: floatDownload 3s ease-in-out infinite alternate;
+    }
 
-  .coin-left {
-    width: 12vw;
-    left: 2vw;
-    bottom: 5vh;
-    z-index: 3;
-  }
+    .coin-left {
+        width: 12vw;
+        left: 2vw;
+        bottom: 5vh;
+        z-index: 3;
+    }
  
-  .coin-right {
-    width: 8vw;
-    left: auto;
-    right: 2vw;
-    bottom: 5vh;
-  }
-}
+    .coin-right {
+        width: 8vw;
+        left: auto;
+        right: 2vw;
+        bottom: 5vh;
+    }
 
-@media (max-width: 768px) {
+    /* موبایل منوی همبرگری و عناصر */
     .header-container {
         flex-direction: column;
         align-items: flex-start;
@@ -392,7 +341,8 @@ body {
     }
 
     .menu-toggle {
-        order: 2; /* بعد از لوگو */
+        order: 2;
+        margin-bottom: 10px;
     }
 
     .nav {
@@ -401,6 +351,7 @@ body {
         flex-direction: column;
         margin-top: 5px;
         background: #f2f2f2;
+        border-radius: 8px;
     }
 
     .nav.active {
@@ -412,10 +363,11 @@ body {
         gap: 10px;
         width: 100%;
         padding: 10px 0;
+        align-items: flex-start;
     }
 
     .header-actions {
-        order: 3; /* بعد از منوی همبرگری */
+        order: 3;
         flex-direction: column;
         align-items: flex-start;
         margin-top: 10px;
@@ -429,7 +381,7 @@ body {
     }
 
     .quick-access {
-        order: 4; /* زیر منو و دکمه‌ها */
+        order: 4;
         width: 100%;
         margin-top: 10px;
     }
@@ -471,5 +423,5 @@ body {
 }
 
 body.lang-en {
-  font-family: Arial, sans-serif; 
+    font-family: Arial, sans-serif; 
 }

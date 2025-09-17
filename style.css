@@ -302,9 +302,8 @@ body {
   .coin-right {
     width: 8vw;
     left: auto;
-    right: 3vw;
+    right: 2vw;
     bottom: 5vh;
-    z-index: 3;
   }
 }
 

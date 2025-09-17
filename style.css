@@ -70,6 +70,9 @@ body {
   z-index: 999;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
+.quick-menu:hover .quick-dropdown {
+  display: block;
+}
 
 .quick-dropdown li {
   list-style: none;

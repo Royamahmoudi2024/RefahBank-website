@@ -30,6 +30,14 @@ langBtn.addEventListener("click", function() {
     }
 });
 
+// دکمه دسترسی سریع
+const quickBtn = document.getElementById("quickBtn");
+const quickMenu = document.querySelector(".quick-menu");
+
+quickBtn.addEventListener("click", () => {
+  quickMenu.classList.toggle("active"); // فعال/غیرفعال شدن منو
+});
+
 // اسکریپت منوی همبرگری
 const menuToggle = document.getElementById("mobile-menu");
 const nav = document.querySelector(".nav");

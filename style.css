@@ -383,6 +383,23 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+    .header-actions {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        flex-direction: row;
+        gap: 5px;
+        z-index: 1000;
+    }
+
+    .header-actions .login-btn,
+    .header-actions .lang-switch {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+}
+
 body.lang-en {
   font-family: Arial, sans-serif; 
 }

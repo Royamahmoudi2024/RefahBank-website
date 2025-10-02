@@ -42,11 +42,10 @@ body {
 }
 
 .quick-btn {
-    background: rgba(255, 255, 255, 0.2); /* شیشه‌ای */
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.3);
+    background: #fff;
+    color: #000;
+    border: 1px solid #ccc;
     border-radius: 8px;
-    color: #fff;
     padding: 8px 12px;
     cursor: pointer;
     font-weight: bold;
@@ -54,7 +53,8 @@ body {
 }
 
 .quick-btn:hover {
-    background: rgba(255, 255, 255, 0.35);
+   background: #ffda44;
+   color: #000;
 }
 
 /* منوی کشویی */
@@ -359,8 +359,8 @@ body {
 
     .header-actions {
         order: 2;
-      margin-left: auto;
-      align-items: flex-end;
+      margin-right: auto;
+      align-items: flex-start;
     }
 
     .header-actions .login-btn,
@@ -379,8 +379,8 @@ body {
         width: auto;
         padding: 6px 12px;
         font-size: 12px;
-        background: rgba(255,255,255,0.3);
-        border: none;
+        background: #fff;
+        border: 1px solid #ccc;
         margin-left: auto;
         border-radius: 6px;
         cursor: pointer;

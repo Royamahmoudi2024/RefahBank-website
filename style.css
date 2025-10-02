@@ -361,10 +361,17 @@ body {
         order: 2;
       margin-right: auto;
       align-items: flex-start;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
     }
 
     .header-actions .login-btn,
     .header-actions .lang-switch {
+        margin: 0;
         font-size: 12px;
         padding: 5px 8px;
     }

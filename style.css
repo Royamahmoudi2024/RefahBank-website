@@ -332,8 +332,10 @@ body {
     }
 
     .menu-toggle {
+        display: block;
         order: 1;
         margin-right: auto;
+        margin-bottom: 10px;
     }
 
     .nav {
@@ -370,9 +372,9 @@ body {
     }
 
     .quick-access {
-        order: 4;
+        order: 2;
         width: 100%;
-        margin-top: 10px;
+        margin-top: 50px;
     }
 
     .quick-access button {

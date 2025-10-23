@@ -1,0 +1,70 @@
+body {
+    font-family: 'vazirmatn', sans-serif;
+    background: #fff;
+    color: #000;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Hero Section درباره ما */
+.about-hero {
+    background: linear-gradient(to left, #1E2A78, #d383e7);
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInDown 1s ease forwards;
+}
+
+.about-hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+}
+
+/* About Main */
+.about-main {
+    padding: 40px 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.about-main h2 {
+    margin-bottom: 15px;
+    color: #1E2A78;
+}
+
+.about-main p {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    background: #1E2A78;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

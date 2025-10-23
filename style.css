@@ -380,6 +380,10 @@ body {
         order: 2;
         width: 100%;
         margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
     }
 
     .quick-access button {
@@ -396,10 +400,10 @@ body {
 
     .quick-access .quick-menu {
         display: none;
-        position: absolute;
+        position: relative;
         flex-direction: column;
-        top: 100%;
-        left: 0;
+        top: auto;
+        left: auto;
         right: auto;
         border-radius: 6px;
         margin-top: 5px;

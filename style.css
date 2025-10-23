@@ -418,7 +418,10 @@ body {
     }
 
     .quick-access .quick-menu li {
+        color:  #000  !important;
         padding: 8px 12px;
+        display: block;
+        text-decoration: none;
         border-bottom: 1px solid #ddd;
         font-size: 13px;
         list-style: none;

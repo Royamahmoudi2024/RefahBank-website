@@ -7,8 +7,8 @@
 
 body {
     font-family: 'vazirmatn', sans-serif;
-    background: #fff;
-    color: #000;
+    background: #121212;
+    color: #fff;
     overflow-x: hidden;
 }
 
@@ -85,17 +85,19 @@ body {
     color: #fff;
     padding: 80px 0;
     text-align: center;
+    font-family: 'vazirmatn' , sans-serif;
 }
 
 .about-hero h1 {
-    font-size: 28px;
+    font-size: 32px;
     margin-bottom: 20px;
     opacity: 0;
     animation: fadeInDown 1s ease forwards;
+    font-weight: bold;
 }
 
 .about-hero p {
-    font-size: 16px;
+    font-size: 18px;
     opacity: 0;
     animation: fadeIn 1.2s ease forwards;
 }
@@ -105,11 +107,14 @@ body {
     padding: 40px 0;
     opacity: 0;
     transition: opacity 1s ease;
+    font-family: 'vazirmatn' , sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
 }
 
 .about-main h2 {
     margin-bottom: 15px;
-    color: #1E2A78;
+    color: #e01078;
 }
 
 .about-main p {
@@ -138,7 +143,15 @@ body {
 
 /* ریسپانسیو */
 @media (max-width: 768px){
-    .about-hero h1 { font-size: 24px; }
-    .about-hero p { font-size: 14px; }
-    .about-main { padding: 20px 10px; }
+    .about-hero h1 {
+         font-size: 24px;
+    }
+    .about-hero p { 
+        font-size: 14px;
+     }
+    .about-main { 
+        padding: 20px 10px;
+        font-size: 14px;
+        line-height: 1.6;
+     }
 }

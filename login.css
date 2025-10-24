@@ -66,8 +66,15 @@ body {
 
 /* هدر فرم */
 .login-header .logo {
-  width:70px;
-  margin-bottom: 15px;
+  width:120px;
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .login-header .logo {
+    width: 90px;
+  }
 }
 
 .login-header h1 {

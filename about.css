@@ -53,8 +53,8 @@ body {
     left: 20px;
     width: 40px;
     height: 40px;
-    background: #000;
-    color: #fff;
+    background: #fff;
+    color: #000;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -63,10 +63,12 @@ body {
     text-decoration: none;
     z-index: 1000;
     transition: 0.3s;
+    box-shadow: 0 0 10px rgba(114, 82, 174, 0.3);
 }
 
 .back-btn:hover {
-    background: #333;
+    background: #f1f1f1;
+    transform: scale(1.1);
 }
 
 /* هدر کوچک */
@@ -143,6 +145,18 @@ body {
 
 /* ریسپانسیو */
 @media (max-width: 768px){
+    .background span {
+        width: 100px;
+        height: 100px;
+        opacity: 0.4;
+    }
+    .back-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+        top: 15px;
+        left: 15px;
+    }
     .about-hero h1 {
          font-size: 24px;
     }

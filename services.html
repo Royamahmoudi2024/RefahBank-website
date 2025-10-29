@@ -1,54 +1,69 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>خدمات بانک رفاه کارگران</title>
-  <link rel="stylesheet" href="services.css" />
+  <link rel="stylesheet" href="services.css">
 </head>
 <body>
-  <!-- پس زمینه متحرک -->
+
+  <!-- توپ‌های متحرک -->
   <div class="background">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+    <span></span><span></span><span></span><span></span><span></span>
   </div>
 
   <!-- دکمه بازگشت -->
   <a href="index.html" class="back-btn">←</a>
 
-  <!-- محتوای اصلی -->
   <section class="services-section">
-    <h1 class="services-title">خدمات ویژه بانک رفاه کارگران</h1>
-    <p class="services-subtitle">نوآوری، امنیت و سرعت در خدمت شماست ✨</p>
+    <h1 class="services-title">خدمات بانک رفاه کارگران</h1>
 
-    <div class="services-grid">
-      <div class="service-card" data-service="1">
-        <h3>وام فوری</h3>
-        <p>دریافت وام بدون ضامن در کمتر از ۲۴ ساعت</p>
-        <button class="more-btn">بیشتر ›</button>
+    <div class="services-container">
+      <div class="service-card">
+        <h2>حساب جاری</h2>
+        <p>مدیریت آسان حساب‌های شما با امنیت و سرعت بالا.</p>
+        <button class="more-btn" data-service="حساب جاری">بیشتر ></button>
       </div>
-      <div class="service-card" data-service="2">
-        <h3>سپرده طلایی</h3>
-        <p>بهره بالا و سود روزشمار برای مشتریان خاص</p>
-        <button class="more-btn">بیشتر ›</button>
+
+      <div class="service-card">
+        <h2>سپرده‌گذاری</h2>
+        <p>سپرده‌گذاری با سود مطمئن و برداشت آنلاین در هر زمان.</p>
+        <button class="more-btn" data-service="سپرده‌گذاری">بیشتر ></button>
       </div>
-      <div class="service-card" data-service="3">
-        <h3>کارت اعتباری</h3>
-        <p>خرید اقساطی با نرخ سود پایین و سقف بالا</p>
-        <button class="more-btn">بیشتر ›</button>
+
+      <div class="service-card">
+        <h2>وام‌ها</h2>
+        <p>دریافت وام‌های فوری با شرایط آسان و بازپرداخت منعطف.</p>
+        <button class="more-btn" data-service="وام‌ها">بیشتر ></button>
+      </div>
+
+      <div class="service-card">
+        <h2>کارت‌ها</h2>
+        <p>کارت‌های بانکی با امکانات ویژه و امنیت بالا.</p>
+        <button class="more-btn" data-service="کارت‌ها">بیشتر ></button>
+      </div>
+
+      <div class="service-card">
+        <h2>اینترنت بانک</h2>
+        <p>دسترسی کامل به حساب‌ها از طریق اینترنت، هرجا و هرزمان.</p>
+        <button class="more-btn" data-service="اینترنت بانک">بیشتر ></button>
+      </div>
+
+      <div class="service-card">
+        <h2>موبایل بانک</h2>
+        <p>با اپلیکیشن موبایل بانک، خدمات بانکی همیشه در دسترس شماست.</p>
+        <button class="more-btn" data-service="موبایل بانک">بیشتر ></button>
       </div>
     </div>
   </section>
 
   <!-- پاپ‌آپ توضیحات -->
-  <div class="popup-overlay" id="popup">
+  <div id="popup" class="popup">
     <div class="popup-content">
       <span class="close-popup">&times;</span>
-      <h2 id="popup-title"></h2>
-      <p id="popup-desc"></p>
+      <h2></h2>
+      <p></p>
     </div>
   </div>
 

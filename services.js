@@ -1,55 +1,35 @@
-// 🎵 صداهای باز و بسته شدن پاپ‌آپ
-const popupOpenSound = new Audio("sounds/popup-open.mp3");
-const popupCloseSound = new Audio("sounds/popup-close.mp3");
-popupOpenSound.volume = 0.4;
-popupCloseSound.volume = 0.3;
-
-// اطلاعات هر خدمت
-const serviceDetails = {
-  1: {
-    title: "وام فوری",
-    desc: "دریافت وام بدون ضامن در کمتر از ۲۴ ساعت با اعتبارسنجی آنلاین و بدون مراجعه حضوری."
-  },
-  2: {
-    title: "سپرده طلایی",
-    desc: "سپرده‌های بلندمدت با نرخ سود ویژه، قابل برداشت در هر زمان و خدمات اختصاصی برای مشتریان وفادار."
-  },
-  3: {
-    title: "کارت اعتباری",
-    desc: "کارت‌های اعتباری با سقف خرید بالا، اقساط منعطف و جوایز نقدی برای پرداخت‌های منظم."
-  }
+const servicesInfo = {
+  "حساب جاری": "مدیریت حساب‌های جاری با امکانات پیشرفته و راحتی کامل.",
+  "سپرده‌گذاری": "سپرده‌گذاری با سود مناسب و امکان برداشت آنلاین.",
+  "وام‌ها": "وام‌های متنوع با شرایط انعطاف‌پذیر و بازپرداخت آسان.",
+  "کارت‌ها": "کارت‌های اعتباری و بانکی با امنیت بالا و مزایای ویژه.",
+  "اینترنت بانک": "دسترسی آنلاین به تمام خدمات بانکی در هر زمان.",
+  "موبایل بانک": "اپلیکیشن موبایل بانک برای انجام سریع تراکنش‌ها."
 };
 
-const popup = document.getElementById("popup");
-const popupTitle = document.getElementById("popup-title");
-const popupDesc = document.getElementById("popup-desc");
-const closePopup = document.querySelector(".close-popup");
+const popup = document.querySelector("#popup");
+const popupContent = popup.querySelector(".popup-content");
+const closePopupBtn = popup.querySelector(".close-popup");
+const moreBtns = document.querySelectorAll(".more-btn");
 
-// باز کردن پاپ‌آپ
-document.querySelectorAll(".more-btn").forEach(btn => {
+moreBtns.forEach(btn => {
   btn.addEventListener("click", () => {
-    const id = btn.parentElement.getAttribute("data-service");
-    popupTitle.textContent = serviceDetails[id].title;
-    popupDesc.textContent = serviceDetails[id].desc;
-    popup.classList.add("show");
-
-    popupOpenSound.currentTime = 0;
-    popupOpenSound.play();
+    const service = btn.dataset.service;
+    popupContent.querySelector("h2").textContent = service;
+    popupContent.querySelector("p").textContent = servicesInfo[service] || "توضیحی در دسترس نیست.";
+    popup.classList.add("active");
+    popupContent.classList.add("show");
   });
 });
 
-// بستن پاپ‌آپ
-closePopup.addEventListener("click", () => {
-  popup.classList.remove("show");
-  popupCloseSound.currentTime = 0;
-  popupCloseSound.play();
+closePopupBtn.addEventListener("click", () => {
+  popup.classList.remove("active");
+  popupContent.classList.remove("show");
 });
 
-// بستن با کلیک بیرون
 popup.addEventListener("click", e => {
   if (e.target === popup) {
-    popup.classList.remove("show");
-    popupCloseSound.currentTime = 0;
-    popupCloseSound.play();
+    popup.classList.remove("active");
+    popupContent.classList.remove("show");
   }
 });

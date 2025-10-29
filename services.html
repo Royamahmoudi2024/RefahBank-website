@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>خدمات بانک رفاه کارگران</title>
+  <link rel="stylesheet" href="services.css" />
+</head>
+<body>
+  <!-- پس زمینه متحرک -->
+  <div class="background">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- دکمه بازگشت -->
+  <a href="index.html" class="back-btn">←</a>
+
+  <!-- محتوای اصلی -->
+  <section class="services-section">
+    <h1 class="services-title">خدمات ویژه بانک رفاه کارگران</h1>
+    <p class="services-subtitle">نوآوری، امنیت و سرعت در خدمت شماست ✨</p>
+
+    <div class="services-grid">
+      <div class="service-card" data-service="1">
+        <h3>وام فوری</h3>
+        <p>دریافت وام بدون ضامن در کمتر از ۲۴ ساعت</p>
+        <button class="more-btn">بیشتر ›</button>
+      </div>
+      <div class="service-card" data-service="2">
+        <h3>سپرده طلایی</h3>
+        <p>بهره بالا و سود روزشمار برای مشتریان خاص</p>
+        <button class="more-btn">بیشتر ›</button>
+      </div>
+      <div class="service-card" data-service="3">
+        <h3>کارت اعتباری</h3>
+        <p>خرید اقساطی با نرخ سود پایین و سقف بالا</p>
+        <button class="more-btn">بیشتر ›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- پاپ‌آپ توضیحات -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-content">
+      <span class="close-popup">&times;</span>
+      <h2 id="popup-title"></h2>
+      <p id="popup-desc"></p>
+    </div>
+  </div>
+
+  <script src="services.js"></script>
+</body>
+</html>
